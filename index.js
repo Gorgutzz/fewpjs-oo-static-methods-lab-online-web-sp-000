@@ -8,19 +8,19 @@ class Formatter {
     return string.replace(/[^A-Za-z0-9- ']+/g, '');
   }
 
-  static titleize(string) {
-    let excluded = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from' ]
+  static titleize(str) {
+    let exceptions = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from' ]
     let result = [];
-    let array = str.split(" ")
-    for (let n = 0; n < array.length; n++) {
+    let arrayOfWords = str.split(" ")
+    for (let n = 0; n < arrayOfWords.length; n++) {
       if (n == 0) {
-        result.push(this.capitalize(array[n]))
+        result.push(this.capitalize(arrayOfWords[n]))
       }
       else {
-        if ( excluded.includes( array[ n ] ) ) {
-          result.push( array[ n ] )
+        if ( exceptions.includes( arrayOfWords[ n ] ) ) {
+          result.push( arrayOfWords[ n ] )
         } else {
-          result.push( this.capitalize( array[ n ] ) )
+          result.push( this.capitalize( arrayOfWords[ n ] ) )
         }
       }
 
