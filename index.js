@@ -17,10 +17,10 @@ class Formatter {
         result.push(this.capitalize(array[i]))
       }
       else {
-        if ( excluded.includes( array[ i ] ) ) {
-          result.push( array[ i ] )
+        if ( excluded.includes(array[i])) {
+          result.push(array[i])
         } else {
-          result.push( this.capitalize( array[ i ] ) )
+          result.push(this.capitalize(array[i]))
         }
       }
 
