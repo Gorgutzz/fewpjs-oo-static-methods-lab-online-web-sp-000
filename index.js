@@ -23,6 +23,7 @@ class Formatter {
           str.push(this.capitalize(array[i]))
         }
       }
+
     }
     return result.join(" ");
   }
