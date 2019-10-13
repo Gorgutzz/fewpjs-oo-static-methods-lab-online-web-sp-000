@@ -9,18 +9,18 @@ class Formatter {
   }
 
   static titleize(string) {
-    let result = [];
+    let str = [];
     let excluded = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from' ]
     let array = string.split(" ")
     for (let i = 0; i < array.length; i++) {
       if (i == 0) {
-        result.push(this.capitalize(array[i]))
+        str.push(this.capitalize(array[i]))
       }
       else {
         if ( excluded.includes(array[i])) {
-          result.push(array[i])
+          str.push(array[i])
         } else {
-          result.push(this.capitalize(array[i]))
+          str.push(this.capitalize(array[i]))
         }
       }
 
