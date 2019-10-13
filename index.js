@@ -9,8 +9,8 @@ class Formatter {
   }
 
   static titleize(string) {
-    let excluded = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from' ]
     let result = [];
+    let excluded = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from' ]
     let array = string.split(" ")
     for (let n = 0; n < array.length; n++) {
       if (n == 0) {
