@@ -9,25 +9,22 @@ class Formatter {
   }
 
   static titleize(string) {
-    let returnString = "";
-    let inputArray = string.split(" ");
-    for (let i = 0; i < inputArray.length; i++){
-      if (i === 0){
-        returnString += `${this.capitalize(inputArray[i])}`
-      } else {
-        switch (inputArray[i]) {case "the":, case "a":, case "an":, case "but":, case "of":, case "and":, case "for":, case "at":, case "by":, case "from":
-            returnString += `${inputArray[i]}`;
-            break;
-          default:
-            returnString += `${this.capitalize(inputArray[i])}`;
+    let excluded = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from' ]
+    let result = [];
+    let array = str.split(" ")
+    for (let n = 0; n < array.length; n++) {
+      if (n == 0) {
+        result.push(this.capitalize(array[n]))
+      }
+      else {
+        if ( exceptions.includes( array[ n ] ) ) {
+          result.push( array[ n ] )
+        } else {
+          result.push( this.capitalize( array[ n ] ) )
         }
       }
-      if (i !== inputArray.length - 1){
-        returnString += " ";
-      }
-    }
-    returnString.slice(-1);
-    return returnString;
-  }
 
+    }
+    return result.join( " " );
+  }
 }
